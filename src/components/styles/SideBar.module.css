@@ -1,0 +1,72 @@
+.left {
+    text-align: center;
+}
+
+.image_wrap {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+.img_profile {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.SecTitleWrap button {
+    background-color: rgb(106, 106, 255);
+    margin: 15px;
+    padding: 20px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 30px;
+    width: 180px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.image_wrap {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.con {
+    margin: 15px;
+    display: flex;
+}
+
+
+.contact label {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+}
+
+.contact label a {
+    text-decoration: none;
+    color: black;
+}
