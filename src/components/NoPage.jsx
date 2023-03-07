@@ -8,10 +8,10 @@ const NoPage = () => {
       <div className={styles.center}>
         <div style={{ fontSize: "4rem" }}>404</div>
       </div>
-      <i>Page doesn't Exist</i>
+      <label>Page not exist</label>
       <div className={styles.travel}>
         <div>
-          Would you like to view my {<NavLink to="/">Profile</NavLink>} ?
+          Would you like to view my {<NavLink to="/profile/home">Profile</NavLink>} ?
         </div>
       </div>
     </div>

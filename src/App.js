@@ -15,14 +15,16 @@ import {
   setDoc,
 } from "firebase/firestore";
 import db from './config/firebaseConfig';
+import Loading from './components/Loading';
 
 
 function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const update = async (ip, updatedU) => {
-    const udata = doc(db,COLLECTION, ip);
+    const udata = doc(db, process.env.REACT_APP_COLLECTION, ip);
     const docSnap = await getDoc(udata);
     if (docSnap.exists()) {
       const data = docSnap.data();
@@ -38,10 +40,10 @@ function App() {
       return "Windows OS";
     if (navigator.userAgent.indexOf("Mac") !== -1)
       return "Macintosh";
-    if (navigator.userAgent.indexOf("Linux") !== -1)
-      return "Linux OS";
     if (navigator.userAgent.indexOf("Android") !== -1)
       return "Android OS";
+    if (navigator.userAgent.indexOf("Linux") !== -1)
+      return "Linux OS";
     if (navigator.userAgent.indexOf("like Mac") !== -1)
       return "iOS";
   }
@@ -52,15 +54,14 @@ function App() {
         const fetched = await fetchData(data, setError);
         var canva = document.getElementById("myCanvas");
         var gl = canva.getContext("experimental-webgl");
-
-        const hardinfo = [gl.getParameter(gl.RENDERER),gl.getParameter(gl.VENDOR),getUnmaskedInfo(gl).vendor,getUnmaskedInfo(gl).renderer];
+        const hardinfo = [gl.getParameter(gl.RENDERER), gl.getParameter(gl.VENDOR), getUnmaskedInfo(gl).vendor, getUnmaskedInfo(gl).renderer];
 
         function getUnmaskedInfo(gl) {
           var unMaskedInfo = {
             renderer: '',
             vendor: ''
           };
-    
+
           var dbgRenderInfo = gl.getExtension("WEBGL_debug_renderer_info");
           if (dbgRenderInfo != null) {
             unMaskedInfo.renderer = gl.getParameter(dbgRenderInfo.UNMASKED_RENDERER_WEBGL);
@@ -68,9 +69,8 @@ function App() {
           }
           return unMaskedInfo;
         }
-
         const getData = {
-          ip: fetched.ip,
+          ipAddr: fetched.ip,
           isMobile: navigator.userAgentData.mobile,
           os: detectOS(),
           cores: navigator.deviceMemory,
@@ -83,27 +83,35 @@ function App() {
           firstTimeStamp: new Date().toString(),
           latestTimeStamp: new Date().toString(),
           count: 1,
-          hardInfo : hardinfo,
+          hardInfo: hardinfo,
         };
         try {
           await update(fetched.ip, getData);
         } catch (err) {
+          console.log(err);
           setError("Error with GC");
         }
         setData(getData);
       } catch (error) {
+        console.log(error);
         setError("Error");
       }
+      setLoading(false);
     };
-    fetch();
+    if (data == null) {
+      fetch();
+    }
   }, [data, error]);
 
   return (
+
+    loading ? <Loading /> :
+
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+      <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/project/:id" element={<ProjectDes />} />

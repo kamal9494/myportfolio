@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Menu = () => {
   const navClicked = ({ isActive }) => {
     return {
-      color: isActive ? "red" : "#333",
+      color: isActive ? "rgb(106, 106, 255)" : "#333",
     };
   };
   return (

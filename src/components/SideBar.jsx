@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const SideBar = () => {
   const navigate = useNavigate();
   const toProjects = () => {
-    navigate("/projects");
+    navigate("/profile/projects");
   };
 
   return (

@@ -32,6 +32,9 @@ const ProjectDes = () => {
                 </a>
               </div>
             </div>
+            <div className={styles.thumb}>
+              <img src={project.img} alt={project.title} />
+            </div>
             <div className={styles.title_wrap}>
               <div className={styles.title}>{project.title}</div>
               <div className={styles.createdDate}>
@@ -78,26 +81,23 @@ const ProjectDes = () => {
               </div>
               <div className={styles.content}>
                 <h4 className={styles.side_h3}>Backend Work :</h4>
-                {
-                  project.details.backend.map((backend) => (
-                    <p key={backend}>{backend}</p>
-                  ))
-                }
+                {project.details.backend.map((backend) => (
+                  <p key={backend}>{backend}</p>
+                ))}
                 <div className={styles.image_wrap}>
-                <img src={project.details.backendImgs} alt={project.title} />
-              </div>
+                  <img src={project.details.backendImgs} alt={project.title} />
+                </div>
               </div>
             </div>
-
 
             <div className={styles.section_wrap}>
               <h1>References</h1>
               <div className={styles.ref_content}>
-                {
-                  project.details.ref.map((object) => (
-                    <a href={object.img} key={object.info}>{object.info}</a>
-                  ))
-                }
+                {project.details.ref.map((object) => (
+                  <a href={object.img} key={object.info}>
+                    {object.info}
+                  </a>
+                ))}
               </div>
             </div>
           </div>

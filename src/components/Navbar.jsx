@@ -31,7 +31,7 @@ const Navbar = () => {
 
   const navItemClicked = ({ isActive }) => {
     return {
-      color: isActive ? "red" : "#333",
+      color: isActive ? "rgb(106, 106, 255)" : "#333",
     };
   };
 

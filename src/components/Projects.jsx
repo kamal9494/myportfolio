@@ -4,9 +4,6 @@ import Model from "./common/ProjectItem/Model";
 import { data } from "../config/data";
 
 const Projects = () => {
-
-  
-
   return (
     <div className={styles.container}>
         {data.map((project) => (

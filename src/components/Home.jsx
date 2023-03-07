@@ -32,7 +32,7 @@ export default function Home() {
         </div>
         {/* Education -- end */}
         <div className={styles.dash}>
-          <div className={styles.content}>
+          <div >
             <h2 className={styles.SecTitle}>Skills</h2>
             <div className={styles.skills}>
               <p className={styles.skill_title}>Java</p>
@@ -43,7 +43,7 @@ export default function Home() {
               <p className={styles.skill_title}>MongoDB</p>
             </div>
           </div>
-          <div>
+          <div className={styles.content}>
             <h2 className={styles.SecTitle}>Interests</h2>
             <ul>
               <li className={styles.skill_title}>Full Stack Development</li>
