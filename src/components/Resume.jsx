@@ -13,7 +13,7 @@ export default function Resume() {
     <div style={styles}>
         <iframe
             title="resume"
-            src="https://drive.google.com/file/d/10ljYyMKeYgMRHX4ihfY9LUf0fCW3hEQl/preview"
+            src="https://drive.google.com/file/d/1ug0snEvjfKpSryFIPDTiBw1h6ZbyD_zO/preview"
           />
     </div>
   )
