@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+This portfolio was hosted in netlify here is the link...
+
+[https://kamal9494.netlify.app/](https://kamal9494.netlify.app/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
