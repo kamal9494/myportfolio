@@ -11,7 +11,7 @@ const NoPage = () => {
       <label>Page not exist</label>
       <div className={styles.travel}>
         <div>
-          Would you like to view my {<NavLink to="/profile/home">Profile</NavLink>} ?
+          Would you like to view my {<NavLink to="/">Profile</NavLink>} ?
         </div>
       </div>
     </div>
