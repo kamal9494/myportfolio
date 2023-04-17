@@ -16,7 +16,7 @@ export default function Resume() {
   }
   return (
     <div style={styles}>
-      <iframe style={ifr} src="https://drive.google.com/file/d/1ThYAX6ypl9Tp-2DoWQLTOxFnIfvOug_F/preview" allow="autoplay"></iframe>
+      <iframe title="Resume" style={ifr} src="https://drive.google.com/file/d/1ThYAX6ypl9Tp-2DoWQLTOxFnIfvOug_F/preview" allow="autoplay"></iframe>
     </div>
   );
 }
