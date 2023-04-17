@@ -1,11 +1,17 @@
 import React from "react";
 import styles from "./styles/Loading.module.css";
-import {InfinitySpin} from "react-loader-spinner";
+import { TailSpin } from "react-loader-spinner";
 
 const Loading = () => {
   return (
     <div className={styles.container}>
-      <InfinitySpin width="200" color="rgb(106, 106, 255)" />
+      <TailSpin
+        height="50"
+        width="50"
+        color="#1c1c1c"
+        ariaLabel="tail-spin-loading"
+        radius="1"
+      />
     </div>
   );
 };

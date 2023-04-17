@@ -61,7 +61,13 @@ const ProjectDes = () => {
                 <p>{project.details.overview}</p>
                 <div className={styles.url}>
                   <p>{project.details.working}</p>
-                  <label>{project.details.deployURL}</label>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={project.details.deployURL}
+                  >
+                    {project.details.deployURL}
+                  </a>
                 </div>
               </div>
             </div>
@@ -73,30 +79,16 @@ const ProjectDes = () => {
               </div>
             </div>
 
-            <div className={styles.section_wrap}>
-              <h1>Deployment</h1>
-              <div className={styles.content}>
-                <h4 className={styles.side_h3}>Frontend Work :</h4>
-                <p>{project.details.frontend}</p>
-              </div>
-              <div className={styles.content}>
-                <h4 className={styles.side_h3}>Backend Work :</h4>
-                {project.details.backend.map((backend) => (
-                  <p key={backend}>{backend}</p>
-                ))}
-                <div className={styles.image_wrap}>
-                  <img src={project.details.backendImgs} alt={project.title} />
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.section_wrap}>
-              <h1>References</h1>
+            <div className={styles.section_wrap_top}>
+              <h1>Dependencies</h1>
+              <p></p>
               <div className={styles.ref_content}>
-                {project.details.ref.map((object) => (
-                  <a href={object.img} key={object.info}>
-                    {object.info}
-                  </a>
+                {project.details.packageList.map((d) => (
+                  <details>
+                    <summary className={styles.sum_div} key={d.title}>{d.title}</summary>
+                    <p className={styles.des}>{d.des}</p>
+                    <a className={styles.ref} href={d.ref} target="_blank" rel="noreferrer">{d.title}</a>
+                  </details>
                 ))}
               </div>
             </div>

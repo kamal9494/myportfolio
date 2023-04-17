@@ -3,13 +3,13 @@ import styles from "./styles/SideBar.module.css";
 import { BsLinkedin } from "react-icons/bs";
 import { GrMail, GrGithub } from "react-icons/gr";
 import { SiLeetcode } from "react-icons/si";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const SideBar = () => {
-  const navigate = useNavigate();
-  const toProjects = () => {
-    navigate("/projects");
-  };
+  // const navigate = useNavigate();
+  // const toProjects = () => {
+  //   navigate("/projects");
+  // };
 
   return (
     <div className={styles.left}>
@@ -71,9 +71,6 @@ const SideBar = () => {
                 </a>
               </label>
               <br />
-            </div>
-            <div className={styles.SecTitleWrap}>
-              <button onClick={() => toProjects()}>Browse Projects</button>
             </div>
           </div>
         </div>

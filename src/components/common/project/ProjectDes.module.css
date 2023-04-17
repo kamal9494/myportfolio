@@ -78,8 +78,7 @@ h1 {
 }
 
 .image_wrap {
-    margin: 50px;
-    /* background-color: red; */
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,6 +100,13 @@ h1 {
 .section_wrap_top ul li {
     line-height: 25px;
     font-size: 1rem;
+}
+.sum_div{
+    margin-top: 10px;
+}
+
+.des{
+    margin: 10px
 }
 
 .section_wrap_top h1 {
@@ -147,6 +153,9 @@ h1 {
     font-size: 1rem;
     color: blue;
 }
+.ref{
+    margin: 10px;
+}
 
 @media (min-width: 414px)and (max-width: 1024px) {
     .container {
@@ -171,8 +180,8 @@ h1 {
 
     .thumb img {
         padding: 10px 0;
-        width: 90%;
-        height: 50%;
+        width: 100%;
+        /* height: 100%; */
     }
 }
 

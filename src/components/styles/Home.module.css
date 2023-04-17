@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&family=Raleway:wght@400;500;700&family=Roboto:wght@100;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Raleway:wght@400;500;700&family=Roboto:wght@100;400&display=swap');
 
 .container {
     padding-top: 76px;
@@ -25,8 +26,44 @@
     transition: all 1s;
     animation: 0.5s slide-right;
 }
-.SecTitle{
+
+.SecTitle {
     list-style: none;
+}
+
+.SecTitleWrap {
+    display: flex;
+    align-items: center;
+}
+
+.SecTitleWrap button {
+    background-color: #1c1c1c;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 30px;
+    width: 90px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container_projects {
+    width: 100%;
+    margin: 0px auto;
+    padding: 90px 70px;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projects_wrap {
+    width: 370px;
+    display: flex;
+    gap: 2%;
 }
 
 @keyframes slide-right {
@@ -46,7 +83,8 @@
     margin-left: 30%;
     width: 70%;
 }
-.content ul li{
+
+.content ul li {
     list-style: none;
 }
 
@@ -140,6 +178,16 @@ iframe {
     -ms-transform: translate(-50%, -50%);
 }
 
+.project_btn {
+    background-color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
 
 /* mobile */
 
@@ -158,6 +206,7 @@ iframe {
         margin-left: 0;
         width: 100%;
     }
+
     iframe {
         margin: 0 20px;
         width: 200;
@@ -183,6 +232,7 @@ iframe {
     .container {
         font-size: 1.4rem;
     }
+
     iframe {
         padding: 0 20%;
         width: 100;
@@ -213,6 +263,7 @@ iframe {
         margin-left: 0;
         width: 100%;
     }
+
     .container {
         margin: 0 auto;
         padding-top: 90px;
@@ -226,4 +277,24 @@ iframe {
     .dash {
         display: block;
     }
+}
+
+@media (max-width: 768px) {
+    .container_projects {
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 910px) {
+    .container_projects {
+        margin-top: 0px;
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        /* justify-content: center; */
+    }
+
 }

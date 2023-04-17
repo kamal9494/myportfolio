@@ -21,7 +21,7 @@ import Loading from './components/Loading';
 function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const update = async (ip, updatedU) => {
     const udata = doc(db, process.env.REACT_APP_COLLECTION, ip);
