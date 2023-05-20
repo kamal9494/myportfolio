@@ -15,27 +15,11 @@
     border-radius: 50%;
 }
 
-.SecTitleWrap button {
-    background-color: rgb(106, 106, 255);
-    margin: 15px;
-    padding: 20px;
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    height: 30px;
-    width: 180px;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-}
 
 
 
 .title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-top: 20px;
 }
@@ -61,7 +45,7 @@
 
 
 .contact label {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: none;
     color: black;
     margin-left: 10px;

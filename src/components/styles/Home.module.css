@@ -3,9 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Raleway:wght@400;500;700&family=Roboto:wght@100;400&display=swap');
 
 .container {
-    padding-top: 76px;
-    height: 100vh;
-    width: 100%;
+    /* padding-top: px; */
     display: flex;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
@@ -15,13 +13,14 @@
     position: fixed;
     width: 30%;
     height: 100%;
-    padding-top: 7%;
-    box-shadow: 0px 0px 0px rgb(0 0 0/ 10%), 0px 0px 10px rgb(0 0 0/ 10%);
+    /* padding-top: 8%; */
+    padding-top: 100px;
+    /* box-shadow: 0px 0px 0px rgb(0 0 0/ 10%), 0px 0px 10px rgb(0 0 0/ 10%); */
 }
 
 .SecTitle {
-    margin: 20px;
-    font-size: 1.6rem;
+    margin: 7px 20px;
+    font-size: 1.4rem;
     font-weight: 500;
     transition: all 1s;
     animation: 0.5s slide-right;
@@ -38,7 +37,7 @@
 
 .SecTitleWrap button {
     background-color: #1c1c1c;
-    font-size: 1rem;
+    font-size: .9rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,9 +78,11 @@
 
 
 .right {
+    margin-top: 30px;
+    /* background-color: red; */
     padding: 50px;
     margin-left: 30%;
-    width: 70%;
+    /* width: 70%; */
 }
 
 .content ul li {
@@ -126,10 +127,6 @@ iframe {
     margin: 10px 0;
 }
 
-.eduTitle {
-    font-family: 'Poppins', sans-serif;
-    font-size: 22px;
-}
 
 
 .certify_wrap {
@@ -163,11 +160,6 @@ iframe {
     /* filter: none; */
 }
 
-.cross_wrap {
-    float: right;
-    font-size: 2rem;
-}
-
 .close_btn {
     position: absolute;
     top: 10%;
@@ -181,13 +173,15 @@ iframe {
 .project_btn {
     background-color: #fff;
     font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: none;
     cursor: pointer;
 }
 
+.live{
+    margin: 10px;
+    color: red;
+    font-size: .8rem;
+}
 
 /* mobile */
 
@@ -230,7 +224,7 @@ iframe {
 
 @media (min-width: 1024px) {
     .container {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
 
     iframe {

@@ -85,9 +85,18 @@ const ProjectDes = () => {
               <div className={styles.ref_content}>
                 {project.details.packageList.map((d) => (
                   <details>
-                    <summary className={styles.sum_div} key={d.title}>{d.title}</summary>
+                    <summary className={styles.sum_div} key={d.title}>
+                      {d.title}
+                    </summary>
                     <p className={styles.des}>{d.des}</p>
-                    <a className={styles.ref} href={d.ref} target="_blank" rel="noreferrer">{d.title}</a>
+                    <a
+                      className={styles.ref}
+                      href={d.ref}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {d.title}
+                    </a>
                   </details>
                 ))}
               </div>
