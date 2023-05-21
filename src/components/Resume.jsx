@@ -10,13 +10,9 @@ export default function Resume() {
     alignItem: "center",
   };
 
-  const ifr = {
-    width : '90%',
-    height : '60vh'
-  }
   return (
     <div style={styles}>
-      <iframe title="Resume" style={ifr} src="https://drive.google.com/file/d/1ThYAX6ypl9Tp-2DoWQLTOxFnIfvOug_F/preview" allow="autoplay"></iframe>
+      <iframe title="Resume" src="https://drive.google.com/file/d/1w1JGmXIFCyREztA_4W3Y-TbA9gerSqTT/preview" allow="autoplay"></iframe>
     </div>
   );
 }
