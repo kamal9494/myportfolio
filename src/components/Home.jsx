@@ -40,7 +40,7 @@ export default function Home() {
                 >
                   ChatBot Web Application using AWS Amplify as backend
                 </span>
-                <a className={styles.live} target="_blank" href="https://academicbot.netlify.app">live demo</a>
+                <a className={styles.live} rel="noreferrer" target="_blank" href="https://academicbot.netlify.app">live demo</a>
               </div>
             </div>
             <div className={styles.dash}>
