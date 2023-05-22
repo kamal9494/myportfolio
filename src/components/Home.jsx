@@ -31,7 +31,7 @@ export default function Home() {
             <div className={styles.content}>
               <div className={styles.SecTitleWrap}>
                 <h2 className={styles.SecTitle}>Projects</h2>
-                <button onClick={() => toProjects()}>Browse all</button>
+                <button type="button" onClick={() => toProjects()}>Browse all</button>
               </div>
               <div className={styles.about}>
                 <span
@@ -40,7 +40,7 @@ export default function Home() {
                 >
                   ChatBot Web Application using AWS Amplify as backend
                 </span>
-                <a className={styles.live} href="https://academicbot.netlify.app">live demo</a>
+                <a className={styles.live} target="_blank" href="https://academicbot.netlify.app">live demo</a>
               </div>
             </div>
             <div className={styles.dash}>

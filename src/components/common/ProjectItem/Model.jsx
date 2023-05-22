@@ -16,7 +16,7 @@ const Model = ({project:{id,title,des,cat,img}}) => {
           <h3>{title}</h3>
         </div>
         <div className={styles.right}>
-          <button onClick={() => nav("/project/"+id)}>View &#x2192;</button>
+          <button type="button" onClick={() => nav("/project/"+id)}>View &#x2192;</button>
         </div>
       </div>
       <div className={styles.des}>

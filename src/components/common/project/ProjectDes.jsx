@@ -24,7 +24,7 @@ const ProjectDes = () => {
         {project ? (
           <div className={styles.container_wrap}>
             <div className={styles.back_wrap}>
-              <button onClick={() => nav("/projects")}>&#x2190; Back</button>
+              <button type="button" onClick={() => nav("/projects")}>&#x2190; Back</button>
               <div className={styles.source}>
                 <GrGithub size={22} />
                 <a target="_blank" rel="noreferrer" href={project.details.repo}>
