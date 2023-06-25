@@ -36,7 +36,7 @@
 }
 
 .SecTitleWrap button {
-    background-color: #1c1c1c;
+    background-color: rgb(230, 230, 230);
     font-size: .9rem;
     display: flex;
     justify-content: center;
@@ -45,8 +45,10 @@
     height: 30px;
     width: 90px;
     border-radius: 5px;
-    color: #fff;
     cursor: pointer;
+}
+.SecTitleWrap button:hover{
+    border: .5px solid #1c1c1c;
 }
 
 .container_projects {

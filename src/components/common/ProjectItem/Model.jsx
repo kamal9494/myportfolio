@@ -7,7 +7,6 @@ const Model = ({project:{id,title,des,cat,img}}) => {
   return (
     <div className={styles.model_wrap}>
       <div className={styles.img_wrap}>
-        
         <img className={styles.imgs} src={img} alt={title} />
       </div>
       <div className={styles.cat}>{cat}</div>

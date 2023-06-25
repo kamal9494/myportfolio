@@ -11,7 +11,7 @@ export const data = [{
         repo: 'https://github.com/kamal9494/acadChatBot',
         stack: ['React JS', 'AWS Amplify', 'Bootstrap'],
         overview: 'This chat bot application will helps you to plan your academics. It gives you the information about the courses, pre-requesites of any course and credits of the course.',
-        working: 'Visit this web application with following URL',
+        working: 'DEMO URL',
         services: ['AWS Lex', 'Lambda'],
         architecture: require('../assets/architecture.png'),
         packageInfo: ['for styling i used bootstrap package'],

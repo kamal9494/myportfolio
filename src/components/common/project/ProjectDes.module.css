@@ -44,9 +44,13 @@
     text-decoration: none;
 }
 
+.source a:hover{
+    text-decoration: underline;
+}
+
 .container_wrap button {
     /* background-color: #F2F2F2; */
-    background-color: #1c1c1c;
+    background-color: rgb(235, 235, 235);
     border-radius: 4px;
     font-size: 1rem;
     display: flex;
@@ -54,11 +58,12 @@
     align-items: center;
     cursor: pointer;
     border: none;
-    width: 100px;
-    padding: 20px;
+    width: 80px;
+    /* padding: 20px; */
     height: 30px;
-    /* color: #292929; */
-    color: #fff;
+}
+.container_wrap button:hover{
+    border: .5px solid #1c1c1c;
 }
 
 h1 {
