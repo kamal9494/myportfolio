@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles/SideBar.module.css";
-import { BsLinkedin } from "react-icons/bs";
+import { BsLinkedin ,BsFileText} from "react-icons/bs";
 import { GrMail, GrGithub } from "react-icons/gr";
 import { SiLeetcode } from "react-icons/si";
 // import { useNavigate } from "react-router-dom";
@@ -28,20 +28,28 @@ const SideBar = () => {
         {/* contact  */}
         <div className={styles.contact}>
           <div>
-            <div className={styles.con}>
-              <GrMail size={22} />
-              <label>kamaltejp@gmail.com</label>
-              <br />
-            </div>
-            <div className={styles.con}>
-              <BsLinkedin size={22} />
+          <div className={styles.con}>
+              <BsFileText size={22} />
               <label>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.linkedin.com/in/kamal-teja/"
+                  href="https://leetcode.com/kamal_94/"
                 >
-                  connect
+                  cv
+                </a>
+              </label>
+              <br />
+            </div>
+            <div className={styles.con}>
+              <SiLeetcode size={22} />
+              <label>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://leetcode.com/kamal_94/"
+                >
+                  leetcode
                 </a>
               </label>
               <br />
@@ -60,16 +68,21 @@ const SideBar = () => {
               <br />
             </div>
             <div className={styles.con}>
-              <SiLeetcode size={22} />
+              <BsLinkedin size={22} />
               <label>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://leetcode.com/kamal_94/"
+                  href="https://www.linkedin.com/in/kamal-teja/"
                 >
-                  kamal_94
+                  connect
                 </a>
               </label>
+              <br />
+            </div>
+            <div className={styles.con}>
+              <GrMail size={22} />
+              <label>kamaltejp@gmail.com</label>
               <br />
             </div>
           </div>

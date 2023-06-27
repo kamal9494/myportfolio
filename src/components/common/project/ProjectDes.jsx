@@ -5,20 +5,33 @@ import { useNavigate } from "react-router-dom";
 import { data } from "../../../config/data";
 import NoPage from "../../NoPage";
 import { GrGithub } from "react-icons/gr";
+import Loading from "../../Loading";
+
 
 const ProjectDes = () => {
-  const nav = useNavigate();
   const { id } = useParams();
   const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let project = data.find((project) => project.id === parseInt(id));
     if (project) {
       setProject(project);
-    }
+      setLoading(false);
+    }else setLoading(false);
   }, [id]);
 
+
   return (
+    <div>
+      {loading ? ( <Loading/> ) : (<View project={project}/>)}
+    </div>
+  );
+};
+
+const View = ({project}) =>{
+  const nav = useNavigate();
+  return(
     <div className={styles.container}>
       <div className={styles.content_wrap}>
         {project ? (
@@ -108,6 +121,6 @@ const ProjectDes = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ProjectDes;

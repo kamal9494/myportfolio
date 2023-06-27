@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import NoPage from "./components/NoPage";
 import Projects from "./components/Projects";
-import Resume from "./components/Resume";
 import ProjectDes from "./components/common/project/ProjectDes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -113,7 +112,6 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/project/:id" element={<ProjectDes />} />
           <Route path="*" element={<NoPage />} />
         </Routes>

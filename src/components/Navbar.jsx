@@ -11,19 +11,19 @@ const Navbar = () => {
   useEffect(() => {
     const resizeListener = () => {
       const set = {
-        wid : window.innerWidth,
-      }
+        wid: window.innerWidth,
+      };
       sw(set);
-      if(w.wid<1024 && isMenuActive){
+      if (w.wid < 1024 && isMenuActive) {
         setMenuActive(false);
       }
     };
-    window.addEventListener('resize', resizeListener);
-    
+    window.addEventListener("resize", resizeListener);
+
     return () => {
-      window.removeEventListener('resize', resizeListener);
+      window.removeEventListener("resize", resizeListener);
     };
-  }, [w,isMenuActive]);
+  }, [w, isMenuActive]);
 
   const clickMenu = () => {
     setMenuActive(false);
@@ -59,11 +59,6 @@ const Navbar = () => {
             <li>
               <NavLink style={navItemClicked} to="/">
                 Profile
-              </NavLink>
-            </li>
-            <li>
-              <NavLink style={navItemClicked} to="/resume">
-                Resume
               </NavLink>
             </li>
             <li>
