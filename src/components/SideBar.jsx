@@ -34,7 +34,7 @@ const SideBar = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://leetcode.com/kamal_94/"
+                  href="https://drive.google.com/file/d/1w1JGmXIFCyREztA_4W3Y-TbA9gerSqTT/preview"
                 >
                   cv
                 </a>
