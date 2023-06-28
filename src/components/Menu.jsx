@@ -16,11 +16,6 @@ const Menu = () => {
         </NavLink>
       </div>
       <div>
-        <NavLink style={navClicked} to="/resume">
-          Resume
-        </NavLink>
-      </div>
-      <div>
       <NavLink style={navClicked} to="/projects">
         Projects
       </NavLink>
