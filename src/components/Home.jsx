@@ -23,8 +23,12 @@ export default function Home() {
             <div className={styles.content}>
               <label className={styles.SecTitle}>Intro</label>
               <p className={styles.about}>
-                I'm Kamal Teja, currently pursuing my final year of a bachelor's
-                degree in Computer Science Engineering. My interests are web
+                I am a student at Vellore Institute of Technology, Amaravati, 
+                currently pursuing the final year of a Bachelor of Engineering 
+                in Computer Science.
+              </p>
+              <p>
+                My interests are web
                 development and problem solving.
               </p>
             </div>
