@@ -51,8 +51,8 @@ export default function Home() {
                   <p className={styles.skill_title}>JavaScript</p>
                   <p className={styles.skill_title}>React JS</p>
                   <p className={styles.skill_title}>HTML & CSS</p>
-                  <p className={styles.skill_title}>PHP</p>
-                  <p className={styles.skill_title}>MongoDB</p>
+                  {/* <p className={styles.skill_title}>PHP</p>
+                  <p className={styles.skill_title}>MongoDB</p> */}
                 </div>
               </div>
             </div>
