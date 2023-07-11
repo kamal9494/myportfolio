@@ -27,7 +27,7 @@ export default function Home() {
                 currently pursuing the final year of a Bachelor of Engineering 
                 in Computer Science.
               </p>
-              <p>
+              <p className={styles.about}>
                 My interests are web
                 development and problem solving.
               </p>
