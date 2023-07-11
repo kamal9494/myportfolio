@@ -9,12 +9,11 @@ export const data = [{
     details: {
         deployURL: 'https://academicbot.netlify.app/',
         repo: 'https://github.com/kamal9494/acadChatBot',
-        stack: ['React JS', 'AWS Amplify', 'Bootstrap'],
+        stack: ['React JS','Module CSS', 'AWS Amplify', 'Bootstrap'],
         overview: 'This chat bot application will helps you to plan your academics. It gives you the information about the courses, pre-requesites of any course and credits of the course.',
         working: 'DEMO URL',
         services: ['AWS Lex', 'Lambda'],
         architecture: require('../assets/architecture.png'),
-        packageInfo: ['for styling i used bootstrap package'],
         packageList: [{
             title: 'bootstrap - 5.2.3',
             des : 'Bootstrap is a popular front-end web development framework that allows you to create responsive and mobile-first websites quickly and easily. It includes CSS and JavaScript components for things like typography, forms and buttons as well as a grid system for laying out content on the page.',
