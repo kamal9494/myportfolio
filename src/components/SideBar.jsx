@@ -34,7 +34,7 @@ const SideBar = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://drive.google.com/file/d/1XC9HNKexvsaXRdDepeGhrWmIfjn1knj5/view?usp=sharing"
+                  href="https://drive.google.com/file/d/11pmZHrqFNuF6CA0YYqXsX08wuWB6O1ZF/view?usp=drive_link"
                 >
                   cv
                 </a>
