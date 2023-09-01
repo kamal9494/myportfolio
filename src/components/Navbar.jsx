@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./styles/Navbar.module.css";
 import Menu from "./Menu";
 import { useState } from "react";
+import {AiOutlineMenu,AiOutlineClose} from "react-icons/ai"
 
 const Navbar = () => {
   const [isMenuActive, setMenuActive] = useState(false);
@@ -69,9 +70,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className={styles.menu} onClick={menuHandler}>
-          <span></span>
-          <span></span>
-          <span></span>
+        { !isMenuActive ? <AiOutlineMenu size={23} /> : <AiOutlineClose size={23}/>}
         </div>
       </div>
       <div

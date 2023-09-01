@@ -37,7 +37,7 @@ export default function Home() {
                 <h2 className={styles.SecTitle}>Projects</h2>
                 <button type="button" onClick={() => toProjects()}>Browse all</button>
               </div>
-              <div className={styles.about}>
+              <div className={styles.project_title}>
                 <span
                   className={styles.project_btn}
                   onClick={() => toChatBot()}
@@ -46,14 +46,15 @@ export default function Home() {
                 </span>
                 <a className={styles.live} rel="noreferrer" target="_blank" href="https://academicbot.netlify.app">live demo</a>
               </div>
+              <p className={styles.bullet}><i>developed a chatbot web app to address university course-related queries.</i></p>
             </div>
             <div className={styles.dash}>
               <div>
                 <h2 className={styles.SecTitle}>Skills</h2>
                 <div className={styles.skills}>
                   <p className={styles.skill_title}>Java</p>
-                  <p className={styles.skill_title}>JavaScript</p>
                   <p className={styles.skill_title}>React JS</p>
+                  <p className={styles.skill_title}>JavaScript</p>
                   <p className={styles.skill_title}>HTML & CSS</p>
                   {/* <p className={styles.skill_title}>PHP</p>
                   <p className={styles.skill_title}>MongoDB</p> */}

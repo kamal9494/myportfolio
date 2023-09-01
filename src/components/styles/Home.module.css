@@ -67,6 +67,16 @@
     gap: 2%;
 }
 
+.project_title{
+    margin: 10px 20px;
+    line-height: 1.7;
+}
+.bullet{
+    margin: 10px 25px;
+    line-height: 1.7; 
+    opacity: .9;
+}
+
 @keyframes slide-right {
     from {
         opacity: 0.2;

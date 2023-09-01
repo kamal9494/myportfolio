@@ -27,7 +27,19 @@ export const data = [{
             title: 'uuid - 9.0.0',
             des : 'UUID stands for Universally Unique Identifier. It is a standardized way of generating unique IDs. I used v4() unique id as a parameter for each message.',
             ref: 'https://www.npmjs.com/package/uuid'
-        }],
+        },
+        {
+            title: 'react-toastify - 9.1.2',
+            des : 'React-Toastify is a library for React that allows developers to easily create and display toast notifications in their React applications',
+            ref: 'https://www.npmjs.com/package/react-toastify'
+        },
+        {
+            title: 'typewriter-effect - 2.20.1',
+            des : 'Typewriter effect is an animation that reveals text gradually, as if its being typed by a typewriter.',
+            ref: 'https://www.npmjs.com/package/typewriter-effect'
+        }
+        
+    ],
         frontend: '',
         backend: ['', 'AWS Amplify Interactions category enables AI-powered chatbots in our mobile application. '],
         backendImgs: require('../assets/amplify.gif'),
@@ -40,7 +52,7 @@ export const data = [{
         }, {
             info: 'react-native-gifted-chat',
             img: 'https://www.npmjs.com/package/react-native-gifted-chat',
-        },
+        }
         ]
     }
 },
