@@ -72,9 +72,10 @@
     line-height: 1.7;
 }
 .bullet{
-    margin: 10px 25px;
-    line-height: 1.7; 
+    margin: 10px 40px;
+    /* line-height: 1.7;  */
     opacity: .9;
+    font-size: medium;
 }
 
 @keyframes slide-right {
@@ -97,9 +98,6 @@
     /* width: 70%; */
 }
 
-.content ul li {
-    list-style: none;
-}
 
 .about {
     margin: 20px;
@@ -188,6 +186,22 @@ progress {
     margin: 10px;
     color: red;
     font-size: .8rem;
+}
+.github{
+    margin: 5px;
+    color: black;
+    font-size: .8rem;
+}
+.uolist{
+
+}
+
+.tech{
+    margin: 10px 20px;
+    display: flex;
+    gap: 10px;
+    /* font-style: italic; */
+    font-size: small;
 }
 
 /* mobile */
