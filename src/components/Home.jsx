@@ -38,7 +38,7 @@ export default function Home() {
                   Browse all
                 </button>
               </div>
-              <div>
+              <div className={styles.project}>
                 <div className={styles.project_title}>
                   <span
                     className={styles.project_btn}
@@ -46,22 +46,24 @@ export default function Home() {
                   >
                     ChatBot Web Application using AWS Amplify as backend
                   </span>
-                  <a
-                    className={styles.live}
-                    rel="noreferrer"
-                    target="_blank"
-                    href="https://academicbot.netlify.app"
-                  >
-                    live demo
-                  </a>
-                  <a
-                    className={styles.github}
-                    rel="noreferrer"
-                    target="_blank"
-                    href="https://github.com/kamal9494/acadChatbot"
-                  >
-                    github
-                  </a>
+                  <div className={styles.labels}>
+                    <a
+                      className={styles.live}
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://academicbot.netlify.app"
+                    >
+                      live demo
+                    </a>
+                    <a
+                      className={styles.github}
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://github.com/kamal9494/acadChatbot"
+                    >
+                      github
+                    </a>
+                  </div>
                 </div>
                 <div className={styles.tech}>
                   <span>Tech Stack:</span>
@@ -75,7 +77,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div>
+              <div className={styles.project}>
                 <div className={styles.project_title}>
                   <span
                     className={styles.project_btn}
@@ -83,22 +85,24 @@ export default function Home() {
                   >
                     Sport Inventory Management System
                   </span>
-                  <a
-                    className={styles.live}
-                    rel="noreferrer"
-                    target="_blank"
-                    href="https://sporttrackpro.vercel.app/"
-                  >
-                    live demo
-                  </a>
-                  <a
-                    className={styles.github}
-                    rel="noreferrer"
-                    target="_blank"
-                    href="https://github.com/kamal9494/sportenvbackend"
-                  >
-                    github
-                  </a>
+                  <div className={styles.labels}>
+                    <a
+                      className={styles.live}
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://sporttrackpro.vercel.app/"
+                    >
+                      live demo
+                    </a>
+                    <a
+                      className={styles.github}
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://github.com/kamal9494/sportenvbackend"
+                    >
+                      github
+                    </a>
+                  </div>
                 </div>
                 <div className={styles.tech}>
                   <span>Tech Stack:</span>
@@ -106,8 +110,8 @@ export default function Home() {
                 </div>
                 <ul className="uolist">
                   <li className={styles.bullet}>
-                    In this project students can easily borrow,
-                    return, and request sports gear through the site.
+                    In this project students can easily borrow, return, and
+                    request sports gear through the site.
                   </li>
                   <li className={styles.bullet}>
                     Admins have a control panel to track student actions and
