@@ -10,10 +10,10 @@ export default function Home() {
     navigate("/project/1");
   };
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-bg-primary h-[100%]">
       <SideBar />
 
-      <div className="md:ml-[300px] lg:ml-[300px] xl:ml-[400px] bg-bg-primary transition-all">
+      <div className="md:ml-[300px] min-h-screen lg:ml-[300px] xl:ml-[400px] transition-all">
         <div>
           <div className="p-6">
             <h2 className="text-xl py-2 font-medium text-zinc-200">Intro</h2>

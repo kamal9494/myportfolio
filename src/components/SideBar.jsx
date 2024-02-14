@@ -5,8 +5,8 @@ import { SiLeetcode } from "react-icons/si";
 
 const SideBar = () => {
   return (
-    <div className="flex pt-[130px] md:pt-0 md:fixed w-full md:w-[300px] lg:w-[300px] xl:w-[400px] bg-bg-primary h-full transition-all">
-      <div className="flex flex-col justify-center items-center w-full">
+    <div className="flex pt-[130px] md:pt-0 md:fixed  w-full md:w-[300px] lg:w-[300px] xl:w-[400px] bg-bg-primary h-full transition-all">
+      <div className="flex flex-col pt-[100px] items-center w-full">
         <div className="mb-2 flex justify-center">
           <img
             className="w-[180px] rounded-full"
