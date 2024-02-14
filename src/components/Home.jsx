@@ -1,147 +1,208 @@
 import React from "react";
-import styles from "./styles/Home.module.css";
 import SideBar from "./SideBar";
 import { useNavigate } from "react-router-dom";
+import { CiLink } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
   const navigate = useNavigate();
-  const toProjects = () => {
-    navigate("/projects");
-  };
   const toChatBot = () => {
     navigate("/project/1");
   };
   return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.sidebar}>
-          <SideBar />
-        </div>
+    <div className="flex flex-col">
+      <SideBar />
 
-        <div className={styles.right}>
-          <div>
-            <div className={styles.content}>
-              <label className={styles.SecTitle}>Intro</label>
-              <p className={styles.about}>
-                I am a student at Vellore Institute of Technology, Amaravati,
-                currently pursuing the final year of a Bachelor of Engineering
-                in Computer Science.
-              </p>
-              <p className={styles.about}>
-                My interests are web development and problem solving.
-              </p>
-            </div>
-            <div className={styles.content}>
-              <div className={styles.SecTitleWrap}>
-                <h2 className={styles.SecTitle}>Projects</h2>
-                <button type="button" onClick={() => toProjects()}>
-                  Browse all
-                </button>
-              </div>
-              <div className={styles.project}>
-                <div className={styles.project_title}>
-                  <span
-                    className={styles.project_btn}
-                    onClick={() => toChatBot()}
-                  >
-                    ChatBot Web Application using AWS Amplify as backend
-                  </span>
-                  <div className={styles.labels}>
+      <div className="md:ml-[300px] lg:ml-[300px] xl:ml-[400px] bg-bg-primary transition-all">
+        <div>
+          <div className="p-6">
+            <h2 className="text-xl py-2 font-medium text-zinc-200">Intro</h2>
+            <p className="text-md text-text-primary">
+              I am a student at Vellore Institute of Technology, Amaravati,
+              currently pursuing the final year of a Bachelor of Engineering in
+              Computer Science.
+            </p>
+            <p className="text-md mt-2 text-text-primary">
+              My interests are web development and problem solving.
+            </p>
+          </div>
+          <div className="flex flex-col p-6 justify-center">
+            <h2 className="text-xl py-2 font-medium text-zinc-200">Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5 py-2">
+              <div className="rounded-md lg:rounded-lg w-full bg-gray-200 shadow-md">
+                <div>
+                  <img
+                    className="rounded-t-md lg:rounded-t-lg"
+                    src={require("../assets/project_chatbot.png")}
+                    alt="project_preview"
+                  />
+                </div>
+                <div className="p-3 flex flex-col justify-center gap-1">
+                  <h2 className="font-bold text-sm sm:text-md">
+                    Academic ChatBot 
+                  </h2>
+                  <div className="text-xs text-text-primary">
+                    React.js, CSS, AWS Amplify, Amazon Lex
+                  </div>
+                </div>
+                <div className="flex justify-between items-center px-3 py-2">
+                  <div>
+                    <button className="text-xs bg-[#2bd576] text-white p-2 rounded-lg" onClick={toChatBot}>Read more</button>
+                  </div>
+                  <div className="flex gap-3">
                     <a
-                      className={styles.live}
-                      rel="noreferrer"
-                      target="_blank"
-                      href="https://academicbot.netlify.app"
-                    >
-                      live demo
-                    </a>
-                    <a
-                      className={styles.github}
-                      rel="noreferrer"
-                      target="_blank"
                       href="https://github.com/kamal9494/acadChatbot"
+                      target="_blank"
+                      rel="noreferrer"
                     >
-                      github
+                      <div className="bg-gray-300 p-1 rounded-full">
+                        <FaGithub size={25} />
+                      </div>
+                    </a>
+                    <a
+                      href="https://academicbot.netlify.app/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className="bg-gray-300 text-blue-600 p-1 rounded-full">
+                        <CiLink size={25} />
+                      </div>
                     </a>
                   </div>
                 </div>
-                <div className={styles.tech}>
-                  <span>Tech Stack:</span>
-                  <p>React.js, CSS, AWS Amplify, Amazon Lex</p>
-                </div>
-                <ul className="uolist">
-                  <li className={styles.bullet}>
-                    developed a chatbot web app to address university
-                    course-related queries.
-                  </li>
-                </ul>
               </div>
 
-              <div className={styles.project}>
-                <div className={styles.project_title}>
-                  <span
-                    className={styles.project_btn}
-                    // onClick={() => toChatBot()}
-                  >
+              <div className="rounded-md lg:rounded-lg w-full bg-gray-200 shadow-md">
+                <div>
+                  <img
+                    className="rounded-t-md"
+                    src={require("../assets/project_sport.png")}
+                    alt="project_preview"
+                  />
+                </div>
+                <div className="p-3 flex flex-col justify-center gap-1">
+                  <h2 className="font-bold text-sm sm:text-md">
                     Sport Inventory Management System
-                  </span>
-                  <div className={styles.labels}>
-                    <a
-                      className={styles.live}
-                      rel="noreferrer"
-                      target="_blank"
-                      href="https://sporttrackpro.vercel.app/"
-                    >
-                      live demo
-                    </a>
-                    <a
-                      className={styles.github}
-                      rel="noreferrer"
-                      target="_blank"
-                      href="https://github.com/kamal9494/sportenvbackend"
-                    >
-                      github
-                    </a>
+                  </h2>
+                  <div className="text-xs text-text-primary">
+                    React.js, Node.js, Express.js, MongoDB, Tailwind
                   </div>
                 </div>
-                <div className={styles.tech}>
-                  <span>Tech Stack:</span>
-                  <p>MongoDB, Express.js, React.js, Node.js, TailwindCSS</p>
-                </div>
-                <ul className="uolist">
-                  <li className={styles.bullet}>
-                    In this project students can easily borrow, return, and
-                    request sports gear through the site.
-                  </li>
-                  <li className={styles.bullet}>
-                    Admins have a control panel to track student actions and
-                    monitor the inventory.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className={styles.dash}>
-              <div>
-                <h2 className={styles.SecTitle}>Skills</h2>
-                <div className={styles.skills}>
-                  <p className={styles.skill_title}>Java</p>
-                  <p className={styles.skill_title}>React JS</p>
-                  <p className={styles.skill_title}>JavaScript</p>
-                  <p className={styles.skill_title}>HTML & CSS</p>
-                  {/* <p className={styles.skill_title}>PHP</p>
-                  <p className={styles.skill_title}>MongoDB</p> */}
+                <div className="flex justify-between items-center px-3 py-2">
+                  <a
+                    href="https://github.com/kamal9494/sportTracker"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="bg-gray-300 p-1 rounded-full">
+                      <FaGithub size={25} />
+                    </div>
+                  </a>
+                  <a
+                    href="https://sporttrackpro.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="bg-gray-300 text-blue-600 p-1 rounded-full">
+                      <CiLink size={25} />
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-          {/* <div>
-          <h2 className={styles.SecTitle}>Certifications</h2>
-          <div className={styles.certify_wrap}>
-            <a target="_blank" rel="noreferrer" href="https://www.coursera.org/account/accomplishments/verify/R3YRY7DTBF73">Server-side Development with NodeJS, Express and MongoDB</a>
+
+          <div className="p-6">
+            <h2 className="text-xl mb-5 font-medium text-zinc-200">
+              What I know
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="bg-card-primary flex flex-col gap-4 p-4 shadow-lg rounded-md">
+                <h3 className="text-lg font-medium text-text-primary">
+                  Programming Language
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    Java
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card-primary flex flex-col gap-4 p-4 shadow-lg rounded-md">
+                <h3 className="text-lg font-medium text-text-primary">
+                  Frontend
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    HTML
+                  </div>
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    CSS
+                  </div>
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    Tailwind
+                  </div>
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    Javascript
+                  </div>
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    React.js
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card-primary flex flex-col gap-4 p-4 shadow-lg rounded-md">
+                <h3 className="text-lg font-medium text-text-primary">
+                  Backend
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    Node.js
+                  </div>
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    Express.js
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card-primary flex flex-col gap-4 p-4 shadow-lg rounded-md">
+                <h3 className="text-lg font-medium text-text-primary">
+                  Tools / Platform
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    Git
+                  </div>
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    Postman
+                  </div>
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    Figma
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card-primary flex flex-col gap-4 p-4 shadow-lg rounded-md">
+                <h3 className="text-lg font-medium text-text-primary">
+                  Database
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    My SQL
+                  </div>
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    MongoDB
+                  </div>
+                  <div className="rounded-md bg-bg-primary text-xs text-text-primary p-2">
+                    Firebase
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div> */}
         </div>
       </div>
-    </>
+    </div>
   );
 }

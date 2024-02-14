@@ -1,10 +1,9 @@
 import React from "react";
-import styles from "./styles/Loading.module.css";
 import { TailSpin } from "react-loader-spinner";
 
 const Loading = () => {
   return (
-    <div className={styles.container}>
+    <div className="h-screen grid place-items-center bg-bg-primary">
       <TailSpin
         height="50"
         width="50"

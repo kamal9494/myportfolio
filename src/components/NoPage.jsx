@@ -1,18 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styles from "./styles/NoPage.module.css";
 
 const NoPage = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.center}>
-        <div style={{ fontSize: "4rem" }}>404</div>
+    <div className="h-screen bg-bg-primary flex flex-col justify-center items-center">
+      <div className="p-5">
+        <div className="text-5xl font-medium text-text-highlight">404</div>
       </div>
-      <label>Page not exist</label>
-      <div className={styles.travel}>
-        <div>
-          Would you like to view my {<NavLink to="/">Profile</NavLink>} ?
-        </div>
+      <span className="text-text-primary">Page not exist</span>
+      <div className="text-text-primary p-4">
+        Would you like to view my{" "}
+        {
+          <NavLink className="text-blue-500" to="/">
+            Profile
+          </NavLink>
+        }{" "}
+        ?
       </div>
     </div>
   );

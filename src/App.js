@@ -1,9 +1,7 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import NoPage from "./components/NoPage";
-import Projects from "./components/Projects";
-import ProjectDes from "./components/common/project/ProjectDes";
+import ProjectDes from "./components/common/ProjectDes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { fetchData } from "./components/common/api";
@@ -108,10 +106,8 @@ function App() {
 
     <div className="App">
       <BrowserRouter>
-      <Navbar />
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
           <Route path="/project/:id" element={<ProjectDes />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
