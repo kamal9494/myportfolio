@@ -12,7 +12,7 @@ const ProjectDes = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let project = data.find((project) => project.id === parseInt(id));
+    let project = data.find((project) => project.id === id);
     if (project) {
       setProject(project);
       setLoading(false);
@@ -31,11 +31,11 @@ const View = ({ project }) => {
           <div>
             <div className="flex py-5 justify-between">
               <button
-                className="bg-[#2bd576] p-2 rounded-lg text-text-highlight"
+                className="bg-btn-secondary p-2 rounded-lg text-text-secondary"
                 type="button"
                 onClick={() => nav("/")}
               >
-                View Profile
+                Profile
               </button>
               <div className="flex gap-2 text-text-primary items-center hover:text-white">
                 <GrGithub size={22} />
@@ -100,8 +100,8 @@ const View = ({ project }) => {
             <div className="mt-10 pb-10">
               <h1 className="text-2xl text-text-highlight">Dependencies</h1>
               <div className="mt-[20px] flex flex-col gap-2">
-                {project.details.packageList.map((d) => (
-                  <details>
+                {project.details.packageList.map((d,i) => (
+                  <details key={i}>
                     <summary className="text-text-highlight" key={d.title}>
                       {d.title}
                     </summary>
