@@ -80,7 +80,7 @@ export default function Home() {
     {
       id: "task-2",
       title: "KoinX Crypto",
-      tech: "React.js, Tailwind, Context-API, React-Router-DOM, Carousel's",
+      tech: "React.js, Tailwind, Context-API, React-Router-DOM, Carousel's, CoinGecko API, TradingView Widget",
       img: require("../assets/task-3.png"),
       github: "https://github.com/kamal9494/koinx-task",
       demo: "https://task-koinx.vercel.app/bitcoin",
