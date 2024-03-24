@@ -95,6 +95,15 @@ export default function Home() {
       demo: "https://assignment-2-hirequotient.netlify.app/",
       readMoreClick: null,
     },
+    {
+      id: "task-4",
+      title: "Online IDE Platform",
+      tech: "React.js, Express.js, Tailwind, MySQL, Redis, Judge0 API",
+      img: require("../assets/task-4.png"),
+      github: "https://github.com/kamal9494/tuf-task",
+      demo: "https://task-tuf.vercel.app/",
+      readMoreClick: null,
+    },
   ];
 
   return (
