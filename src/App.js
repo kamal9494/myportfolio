@@ -5,20 +5,17 @@ import ProjectDes from "./components/common/ProjectDes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { fetchData } from "./components/common/api";
-import {
-  updateDoc,
-  doc,
-  getDoc,
-  setDoc,
-} from "firebase/firestore";
-import db from './config/firebaseConfig';
-import Loading from './components/Loading';
-
+import { updateDoc, doc, getDoc, setDoc } from "firebase/firestore";
+import db from "./config/firebaseConfig";
+import Loading from "./components/Loading";
+import Lottie from "lottie-react";
+import animation from "./assets/work-on.json";
 
 function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [level, setLevel] = useState(0);
 
   const update = async (ip, updatedU) => {
     const udata = doc(db, process.env.REACT_APP_COLLECTION, ip);
@@ -33,17 +30,12 @@ function App() {
   };
 
   const detectOS = () => {
-    if (navigator.userAgent.indexOf("Win") !== -1)
-      return "Windows OS";
-    if (navigator.userAgent.indexOf("Mac") !== -1)
-      return "Macintosh";
-    if (navigator.userAgent.indexOf("Android") !== -1)
-      return "Android OS";
-    if (navigator.userAgent.indexOf("Linux") !== -1)
-      return "Linux OS";
-    if (navigator.userAgent.indexOf("like Mac") !== -1)
-      return "iOS";
-  }
+    if (navigator.userAgent.indexOf("Win") !== -1) return "Windows OS";
+    if (navigator.userAgent.indexOf("Mac") !== -1) return "Macintosh";
+    if (navigator.userAgent.indexOf("Android") !== -1) return "Android OS";
+    if (navigator.userAgent.indexOf("Linux") !== -1) return "Linux OS";
+    if (navigator.userAgent.indexOf("like Mac") !== -1) return "iOS";
+  };
 
   useEffect(() => {
     const fetch = async () => {
@@ -51,18 +43,27 @@ function App() {
         const fetched = await fetchData(data, setError);
         var canva = document.getElementById("myCanvas");
         var gl = canva.getContext("experimental-webgl");
-        const hardinfo = [gl.getParameter(gl.RENDERER), gl.getParameter(gl.VENDOR), getUnmaskedInfo(gl).vendor, getUnmaskedInfo(gl).renderer];
+        const hardinfo = [
+          gl.getParameter(gl.RENDERER),
+          gl.getParameter(gl.VENDOR),
+          getUnmaskedInfo(gl).vendor,
+          getUnmaskedInfo(gl).renderer,
+        ];
 
         function getUnmaskedInfo(gl) {
           var unMaskedInfo = {
-            renderer: '',
-            vendor: ''
+            renderer: "",
+            vendor: "",
           };
 
           var dbgRenderInfo = gl.getExtension("WEBGL_debug_renderer_info");
           if (dbgRenderInfo != null) {
-            unMaskedInfo.renderer = gl.getParameter(dbgRenderInfo.UNMASKED_RENDERER_WEBGL);
-            unMaskedInfo.vendor = gl.getParameter(dbgRenderInfo.UNMASKED_VENDOR_WEBGL);
+            unMaskedInfo.renderer = gl.getParameter(
+              dbgRenderInfo.UNMASKED_RENDERER_WEBGL
+            );
+            unMaskedInfo.vendor = gl.getParameter(
+              dbgRenderInfo.UNMASKED_VENDOR_WEBGL
+            );
           }
           return unMaskedInfo;
         }
@@ -100,10 +101,13 @@ function App() {
     }
   }, [data, error]);
 
-  return (
+  if (level === 0) {
+    return <Main setLevel={setLevel} />;
+  }
 
-    loading ? <Loading /> :
-
+  return loading ? (
+    <Loading />
+  ) : (
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -115,10 +119,30 @@ function App() {
       <canvas
         id="myCanvas"
         style={{ display: "none", visibility: "hidden" }}
-      >
-      </canvas>
+      ></canvas>
     </div>
   );
 }
+
+const Main = ({ setLevel }) => {
+  return (
+    <div className="min-h-screen bg-bg-primary flex flex-col justify-center items-center">
+      <h1 className="text-2xl text-white p-2 mb-5">
+        Working on improving the design!
+      </h1>
+
+      <div className="max-w-4xl flex justify-start">
+        <Lottie animationData={animation} />
+      </div>
+
+      <button
+        className="p-2 mt-10 md:text-sm font-medium bg-white rounded"
+        onClick={() => setLevel(1)}
+      >
+        View Legacy Profile
+      </button>
+    </div>
+  );
+};
 
 export default App;
