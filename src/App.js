@@ -135,12 +135,12 @@ const Main = ({ setLevel }) => {
         <Lottie animationData={animation} />
       </div>
 
-      <button
-        className="p-2 mt-10 md:text-sm font-medium bg-white rounded"
+      <span
+        className="mt-10 cursor-pointer underline text-white font-medium"
         onClick={() => setLevel(1)}
       >
-        View Legacy Profile
-      </button>
+        view anyway
+      </span>
     </div>
   );
 };
