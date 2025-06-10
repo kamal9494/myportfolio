@@ -15,7 +15,7 @@ function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [level, setLevel] = useState(0);
+  const [level, setLevel] = useState(1);
 
   const update = async (ip, updatedU) => {
     const udata = doc(db, process.env.REACT_APP_COLLECTION, ip);
