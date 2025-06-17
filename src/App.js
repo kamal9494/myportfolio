@@ -108,7 +108,7 @@ function App() {
   return loading ? (
     <Loading />
   ) : (
-    <div className="App">
+    <div className="App bg-bg-primary">
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
