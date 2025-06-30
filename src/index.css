@@ -20,6 +20,12 @@
     --text-highlight: #fff;
 }
 
+html,
+body {
+  background-color: var(--bg-primary);
+  min-height: 100%;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     background-color: var(--bg-primary);
